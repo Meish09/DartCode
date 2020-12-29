@@ -1,0 +1,27 @@
+void main() {
+  print(fibonaccinPrime(6));
+  }
+
+int fibonaccinPrime(int n) {
+  
+  int i,j,k,m=1;
+  for (i=1; i<=n; i++){
+    k=1;
+    for(j=2; j<=i/2;++j){
+      if(i%j==0)
+      {
+        k=0;
+        break;
+      }
+    }
+    if (k==1){
+      m++;
+      while(m<=10){
+      print("prime number is ${i}");
+      }
+      }
+    }
+  if (n == 0 || n == 1) return n;
+  return fibonaccinPrime(n - 1) + fibonaccinPrime(n - 2);
+}
+
